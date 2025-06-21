@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pearlbeautyparlour.netlify.app/sitemap.xml
