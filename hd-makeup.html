@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HD Makeup | Pearl Beauty Parlour</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #e91e63;
+      --secondary: #fff0f5;
+      --accent: #880e4f;
+      --price: #4caf50;
+      --card-bg: #ffffff;
+      --text: #333;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+    }
+    body {
+      background: var(--secondary);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: url('image_hd.jpg') center center / cover no-repeat fixed;
+      color: white;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      text-align: center;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(233, 30, 99, 0.7), rgba(0, 0, 0, 0.5));
+      z-index: 1;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+      animation: fadeInDown 2s ease-out;
+    }
+    header p {
+      font-size: 1.4rem;
+      font-weight: 300;
+      animation: fadeInUp 2s ease-out;
+    }
+    @keyframes fadeInDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .makeovers {
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .makeovers h2 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 2.5rem;
+      font-family: 'Playfair Display', serif;
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(233, 30, 99, 0.1);
+      width: 100%;
+      max-width: 400px;
+      padding: 2rem;
+      transition: all 0.4s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 40px rgba(233, 30, 99, 0.25);
+    }
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
+    }
+    .card h3 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    .price {
+      font-weight: bold;
+      color: var(--price);
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .btn {
+      padding: 0.9rem 1.8rem;
+      background: linear-gradient(45deg, #e91e63, #ad1457);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: inline-block;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #e91e63;
+    }
+    footer {
+      margin-top: 4rem;
+      padding: 1.5rem;
+      text-align: center;
+      background: var(--accent);
+      color: white;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.4rem;
+      }
+      .makeovers h2 {
+        font-size: 2rem;
+      }
+      .card {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 data-aos="fade-down">HD Makeup</h1>
+    <p data-aos="fade-up">Smooth, detailed and high-definition glam for any occasion</p>
+  </header>
+
+  <section class="makeovers">
+    <h2 data-aos="fade-up">High-Definition Elegance</h2>
+    <div class="cards">
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="hd makeup.jpg" alt="HD Makeup"  />
+        <h3>Refined HD Finish</h3>
+        <p>Capture the spotlight with a makeup finish so flawless, it's camera-ready. Our HD makeup uses premium products for that airbrushed, smooth skin finish perfect for photos and events.</p>
+        <span class="price">₹2,500</span>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_XtBz-6OqGB7sLTLusKVsmOfAy89qFmPIJE8-PF33RP9_tA/viewform?embedded=true" class="btn" target="_blank">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Pearl Beauty Parlour. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
+

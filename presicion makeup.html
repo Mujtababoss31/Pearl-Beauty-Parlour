@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Precision Makeup Application | Pearl Beauty Parlour</title>
+
+  <!-- Fonts & AOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    :root {
+      --primary: #e91e63;
+      --accent: #6a1b9a;
+      --background: #fff0f5;
+      --price: #0dac25;
+      --text: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-image: url('your-parallax-image.jpg'); /* Replace with actual image */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 5rem 1rem 4rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(236, 64, 122, 0.6);
+      z-index: 0;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      animation: fadeIn 1s ease-out;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      animation: fadeIn 1.4s ease-out;
+    }
+
+    .makeovers {
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    .makeovers h2 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 2.5rem;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+      width: 340px;
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+    }
+
+    .card h3 {
+      font-size: 1.6rem;
+      color: var(--primary);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 0.6rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: var(--price);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.6rem;
+      background: linear-gradient(to right, #e91e63, #ad1457);
+      color: white;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #c2185b;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 4rem;
+      background: #880e4f;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .makeovers h2 {
+        font-size: 2rem;
+      }
+
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Precision Makeup Application</h1>
+    <p>Impeccably detailed makeup tailored for flawless bridal beauty</p>
+  </header>
+
+  <section class="makeovers">
+    <h2 data-aos="fade-up">Flawless Definition</h2>
+    <div class="cards">
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="IMAGERoyal Bridal Elegance2.PNG" alt="Elegant Makeup" />
+        <h3>Elegant Precision Finish</h3>
+        <p>Achieve captivating definition with expertly blended eyes, sculpted features, and a high-definition base that lasts all day.</p>
+        <span class="price">₹6,200</span>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_XtBz-6OqGB7sLTLusKVsmOfAy89qFmPIJE8-PF33RP9_tA/viewform?embedded=true" target="_blank" class="btn">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Pearl Beauty Parlour. All rights reserved.
+  </footer>
+
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+
+</html>
+
+
+
+
