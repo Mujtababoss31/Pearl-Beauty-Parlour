@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skin Care & Facial | Pearl Beauty Parlour</title>
+
+  <!-- Fonts & AOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    :root {
+      --primary: #e91e63;
+      --accent: #6a1b9a;
+      --bg-light: #fff0f5;
+      --price: #0bbc1c;
+      --text: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: var(--bg-light);
+      color: var(--text);
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('IMAGEfacial.jpg') center/cover no-repeat fixed;
+      padding: 5rem 1rem 4rem;
+      text-align: center;
+      color: white;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 75vh;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(236, 64, 122, 0.7), rgba(0, 0, 0, 0.5));
+      z-index: 0;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 0.6rem;
+      animation: fadeInDown 1s ease;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .makeovers {
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    .makeovers h2 {
+      font-size: 2.4rem;
+      color: var(--accent);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 2.5rem;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      width: 340px;
+      padding: 2rem;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      text-align: left;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+    }
+
+    .card h3 {
+      font-size: 1.7rem;
+      color: var(--primary);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 0.7rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      color: var(--price);
+      font-weight: bold;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background: linear-gradient(to right, #e91e63, #ad1457);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #c2185b;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 4rem;
+      background: #880e4f;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .makeovers h2 {
+        font-size: 2rem;
+      }
+
+      .card {
+        width: 90%;
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Skin Care & Facial</h1>
+    <p>Glow with confidence — treat your skin to the care it truly deserves</p>
+  </header>
+
+  <section class="makeovers">
+    <h2 data-aos="fade-up">Signature Skin Treatments</h2>
+    <div class="cards">
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="IMAGEfacial.png" alt="Skin Care Facial" />
+        <h3>Radiance Facial Therapy</h3>
+        <p>Indulge in a rejuvenating facial experience designed to deeply cleanse, hydrate, and illuminate your skin. Perfect for brides, professionals, or anyone seeking a flawless glow.</p>
+        <span class="price">₹7,000</span>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_XtBz-6OqGB7sLTLusKVsmOfAy89qFmPIJE8-PF33RP9_tA/viewform?embedded=true" class="btn" target="_blank">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Pearl Beauty Parlour. All rights reserved.
+  </footer>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
+
+
+

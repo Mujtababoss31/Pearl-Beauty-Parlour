@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traditional Bridal Glam | Pearl Beauty Parlour</title>
+
+  <!-- Fonts & AOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    :root {
+      --primary: #e91e63;
+      --accent: #6a1b9a;
+      --background: #fff0f5;
+      --price: #d81b60;
+      --text: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--text);
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('your-parallax-image.jpg') center/cover no-repeat fixed;
+      padding: 5rem 1rem 4rem;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(236, 64, 122, 0.6);
+      z-index: 0;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      animation: fadeInUp 1.3s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .makeovers {
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    .makeovers h2 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 2.5rem;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+      width: 340px;
+      padding: 2rem;
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+    }
+
+    .card h3 {
+      font-size: 1.6rem;
+      color: var(--primary);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 0.6rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--price);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.6rem;
+      background: linear-gradient(to right, #e91e63, #ad1457);
+      color: white;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #c2185b;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 4rem;
+      background: #880e4f;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .makeovers h2 {
+        font-size: 2rem;
+      }
+
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Traditional Bridal Glam</h1>
+    <p>Timeless beauty inspired by rich traditions and modern elegance</p>
+  </header>
+
+  <section class="makeovers">
+    <h2 data-aos="fade-up">Our Signature Look</h2>
+    <div class="cards">
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="image traditional bridal glam.png" alt="Traditional Glam Look" />
+        <h3>Glamorous Traditional Look</h3>
+        <p>Classic red bridal glam with shimmering gold, precise contouring, and radiant highlights for a truly regal finish.</p>
+        <span class="price">₹5,500</span>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfz0SfMmyA3w22t8Gafi_KAhDEkpEWaExbAYi69a9zhGyNuSg/viewform?embedded=true" target="_blank" class="btn">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Pearl Beauty Parlour. All rights reserved.
+  </footer>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+
+</html>
+
+
+
+
+

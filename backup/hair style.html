@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hair Styling | Pearl Beauty Parlour</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #e91e63;
+      --accent: #6a1b9a;
+      --background: #fff0f5;
+      --text: #333;
+      --price: #4caf50;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('image hairstyling.png') center center / cover no-repeat fixed;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      position: relative;
+      text-align: center;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(233, 30, 99, 0.6), rgba(0, 0, 0, 0.4));
+      z-index: 1;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+      animation: fadeInDown 2s ease-out;
+    }
+
+    header p {
+      font-size: 1.4rem;
+      font-weight: 300;
+      animation: fadeInUp 2s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .makeovers {
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    .makeovers h2 {
+      font-size: 2.4rem;
+      color: var(--accent);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 2.5rem;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      max-width: 380px;
+      padding: 2rem;
+      margin: 1rem;
+      text-align: left;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 1.3rem;
+    }
+
+    .card h3 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 0.7rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    .price {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--price);
+      margin-bottom: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.6rem;
+      background: linear-gradient(45deg, #e91e63, #ad1457);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #c2185b;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 4rem;
+      background: #880e4f;
+      color: #fff;
+      text-align: center;
+      padding: 1.4rem;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        max-width: 90%;
+        margin: auto;
+      }
+
+      header h1 {
+        font-size: 2.3rem;
+      }
+
+      .makeovers h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 data-aos="fade-down">Hair Styling</h1>
+    <p data-aos="fade-up">Flawless hairdos for every occasion and celebration</p>
+  </header>
+
+  <section class="makeovers">
+    <h2 data-aos="fade-up">Signature Hair Styling</h2>
+    <div class="cards">
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="image hairstyling.png" alt="Hair Styling" />
+        <h3>Elegant Hair Styling</h3>
+        <p>From sleek buns to flowing curls and bridal braids, our expert stylists create stunning hairstyles tailored to your event and personality. Perfect for weddings, parties, or any special moment.</p>
+        <span class="price">₹4,500</span>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_XtBz-6OqGB7sLTLusKVsmOfAy89qFmPIJE8-PF33RP9_tA/viewform?embedded=true" class="btn" target="_blank">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Pearl Beauty Parlour. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+</body>
+</html>
+
+
+
