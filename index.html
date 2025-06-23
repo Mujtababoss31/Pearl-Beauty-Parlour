@@ -45,12 +45,14 @@
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
-
-    body {
+   body {
       font-family: 'Playfair Display', serif;
       color: var(--text);
       background: url('image background.png') center/cover fixed no-repeat;
-    }
+    } 
+
+
+
 
     h1,
     h2,
@@ -88,13 +90,33 @@
     }
 
     .hero {
-      background: url('backgroun hero section.jpg') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top: 60px;
-    }
+  background: url('backgroun hero section.jpg') center center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  position: relative;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh; /* Reduce height for small screens */
+    background-position: center top;
+    background-size: cover;
+    padding-top: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+    background-position: center top;
+    background-size: cover;
+    padding-top: 40px;
+  }
+}
+
 
     .overlay {
       background: rgba(255, 255, 255, 0.15);
@@ -206,19 +228,28 @@
   </style>
 </head>
 
-<body>
+ </div>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <img src="logo.png" alt="Pearl Beauty Logo" class="logo" />
+      <h1 class="welcome-text">Welcome to Pearl Beauty Parlour</h1>
+    </div>
+  </div><body>
   <div class="navbar">
     <div style="display: flex; align-items: center;">
       <img src="logo.png" alt="Pearl Beauty Logo" style="height: 50px; margin-right: 10px;">
       <h2>Pearl Beauty</h2>
     </div>
-    <div>
+  <div>
       <a href="#services">Services</a>
       <a href="#makeovers">Makeovers</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#gallery">Gallery</a>
       <a href="#booking">Book</a>
     </div>
+
+
   </div>
   <!-- Preloader -->
   <div id="preloader">
@@ -317,6 +348,7 @@
       document.getElementById('preloader').style.display = 'none';
     }, 5100);
   </script>
+  
 
 
   <!-- Hero -->
@@ -325,8 +357,42 @@
       <h1 class="hero-title">Welcome to Pearl Beauty Parlour</h1>
       <p class="hero-subtext">Unveil your elegance with expert care by <strong>Samena Khan</strong></p>
       <a href="#services" class="btn">Discover Your Glow</a>
+      
+
     </div>
   </div>
+  <div>
+ 
+
+    <!-- Offer Badge Inside Hero -->
+<div id="hero-offer" style="
+  position: absolute;
+  top: 500px;
+  CENTRE: 245px;
+  background: radial-gradient(circle, #e48ebc, #dc4c94);
+  color: rgb(32, 23, 23);
+  font-size: 1.2`rem;
+  font-weight: bold;
+  padding: 1.8rem 1.7rem;
+  border-radius: 50%;border-color: #333;
+  box-shadow: 0 0 20px rgba(168, 7, 93, 0.8);
+  z-index: 1000;
+  cursor: pointer;
+  animation: pulseHeroOffer 2s infinite ease-in-out;
+  text-align: center;
+  width: 167px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+  transform: rotate(-10deg);
+  border-style: ridge;
+">
+  🎉<br>20%<br>OFF <br>Book online to avail offer...
+</div>
+
+    <div>
 
 
   <!-- Services -->
@@ -499,49 +565,168 @@
     document.getElementById("gallery-box").style.display = "block";
   }
 </script>
+<!-- Booking Section -->
+<section id="booking" data-aos="fade-up">
+  <style>
+    #booking {
+      background: url('background-beauty.jpg') center center / cover no-repeat fixed;
+      padding: 4rem 1rem;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      color: #333;
+    }
 
-  <!-- Booking Section -->
-  <section id="booking"
-    style="background:url('background-beauty.jpg') center/cover fixed no-repeat; padding: 4rem 1rem;"
-    data-aos="fade-up">
-    <div style="max-width: 900px; margin: auto; text-align: center;">
-      <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #e91e63; margin-bottom: 2rem;">Book
-        Your Glow
-        Click To Open Google Order Form</h2>
+    #booking .container {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
 
-      <!-- Button to Reveal Google Form -->
-      <button onclick="toggleGoogleForm()"
-        style="padding: 1rem 2rem; background-color: #e91e63; border: none; border-radius: 30px; color: white; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.3s;">
-        Start Booking
-      </button>
+    #booking h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #e91e63;
+      margin-bottom: 2rem;
+    }
 
-      <!-- Google Form Embed (Initially Hidden) -->
-      <div id="googleForm" style="margin-top: 2rem; display: none; transition: all 0.5s ease-in-out;">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSfz0SfMmyA3w22t8Gafi_KAhDEkpEWaExbAYi69a9zhGyNuSg/viewform?embedded=true"
-          width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0"
-          style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">Loading…</iframe>
-      </div>
+    #booking button {
+      padding: 1rem 2rem;
+      background-color: #e91e63;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
 
-      <!-- WhatsApp Form (Blocked Until Form Submit) -->
-      <form id="whatsappForm" onsubmit="return checkGoogleFormSubmit()"
-        style="margin-top: 2.5rem; background: #ffffff; padding: 2rem; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); max-width: 600px; margin-left: auto; margin-right: auto;"
-        data-aos="fade-up" data-aos-delay="300">
-        <h3 style="color: #6a1b9a; margin-bottom: 1.5rem;"> First submit the google Form afer Confirm via WhatsApp</h3>
-        <input type="text" id="wname" placeholder="Your Name" required
-          style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border-radius: 10px; border: 1px solid #ccc;">
-        <input type="text" id="wservice" placeholder="Service Name" required
-          style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border-radius: 10px; border: 1px solid #ccc;">
-        <input type="date" id="wdate" required
-          style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border-radius: 10px; border: 1px solid #ccc;">
-        <button type="submit"
-          style="padding: 0.8rem 2rem; background-color: #4caf50; border: none; color: white; font-weight: bold; border-radius: 30px; font-size: 1rem; cursor: pointer;">Send
-          on WhatsApp</button>
-        <p id="formError" style="color: red; margin-top: 1rem; display: none;">⚠️ Please submit the Google Form first!
-        </p>
-      </form>
+    #booking button:hover {
+      background-color: #c2185b;
+    }
+
+    #googleForm {
+      margin-top: 2rem;
+      display: none;
+      transition: all 0.5s ease-in-out;
+    }
+
+    #googleForm iframe {
+      width: 100%;
+      height: 1200px;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    #whatsappForm {
+      margin-top: 2.5rem;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #whatsappForm h3 {
+      color: #6a1b9a;
+      margin-bottom: 1.5rem;
+    }
+
+    #whatsappForm input,
+    #whatsappForm button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    #whatsappForm button {
+      background-color: #4caf50;
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      #booking {
+        background-attachment: scroll !important;
+        background-position: center top;
+        padding: 3rem 1rem;
+      }
+
+      #booking h2 {
+        font-size: 1.8rem;
+        line-height: 1.4;
+      }
+
+      #googleForm iframe {
+        height: 1000px;
+      }
+    }
+  </style>
+
+  <div class="container">
+    <h2>Book Your Glow <br />Click To Open Google Order Form</h2>
+
+    <!-- Reveal Google Form Button -->
+    <button onclick="toggleGoogleForm()">Start Booking</button>
+
+    <!-- Google Form Embed -->
+    <div id="googleForm">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfz0SfMmyA3w22t8Gafi_KAhDEkpEWaExbAYi69a9zhGyNuSg/viewform?embedded=true">
+        Loading…
+      </iframe>
     </div>
-  </section>
+
+    <!-- WhatsApp Confirmation Form -->
+    <form id="whatsappForm" onsubmit="return checkGoogleFormSubmit()" data-aos="fade-up" data-aos-delay="300">
+      <h3>First submit the Google Form, then confirm via WhatsApp</h3>
+      <input type="text" id="wname" placeholder="Your Name" required />
+      <input type="text" id="wservice" placeholder="Service Name" required />
+      <input type="date" id="wdate" required />
+      <button type="submit">Send on WhatsApp</button>
+      <p id="formError" style="color: red; display: none;">⚠️ Please submit the Google Form first!</p>
+    </form>
+  </div>
+</section>
+
+<script>
+  function toggleGoogleForm() {
+    const form = document.getElementById("googleForm");
+    form.style.display = form.style.display === "none" ? "block" : "none";
+  }
+
+  function checkGoogleFormSubmit() {
+    const formShown = document.getElementById("googleForm").style.display === "block";
+    if (!formShown) {
+      document.getElementById("formError").style.display = "block";
+      return false;
+    }
+    document.getElementById("formError").style.display = "none";
+
+    const name = document.getElementById("wname").value;
+    const service = document.getElementById("wservice").value;
+    const date = document.getElementById("wdate").value;
+
+    const whatsappURL =
+      `https://wa.me/919032103077?text=Hi! My name is ${encodeURIComponent(name)}. I have booked for ${encodeURIComponent(service)} on ${encodeURIComponent(date)} via your website.`;
+
+    window.open(whatsappURL, "_blank");
+    return false;
+  }
+</script>
+
+</script>
+
 
   <!-- AOS Library -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
