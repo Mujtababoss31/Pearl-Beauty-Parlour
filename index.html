@@ -240,6 +240,12 @@
     <div style="display: flex; align-items: center;">
       <img src="logo.png" alt="Pearl Beauty Logo" style="height: 50px; margin-right: 10px;">
       <h2>Pearl Beauty</h2>
+      <a href="https://instagram.com/pearlbeauty_hyd" target="_blank">
+   Follow us on Instagram for latest offers!
+  
+
+</a>
+
     </div>
   <div>
       <a href="#services">Services</a>
@@ -274,6 +280,32 @@
       animation: fadeOut 1s ease forwards;
       animation-delay: 5s;
     }
+  .insta-link {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.insta-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.insta-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+
 
     .preloader-content {
       text-align: center;
@@ -357,6 +389,8 @@
       <h1 class="hero-title">Welcome to Pearl Beauty Parlour</h1>
       <p class="hero-subtext">Unveil your elegance with expert care by <strong>Samena Khan</strong></p>
       <a href="#services" class="btn">Discover Your Glow</a>
+ 
+
       
 
     </div>
@@ -495,6 +529,30 @@
 </section>
 
 <style>
+  .floating-insta {
+  position: fixed;
+  bottom: 90px; /* Adjust to sit above WhatsApp */
+  right: 20px;
+  z-index: 999;
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: bounce 2s infinite;
+}
+
+.floating-insta img {
+  width: 30px;
+  height: 30px;
+  display: block;
+  filter: brightness(100%);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
   .gallery-box {
     background: linear-gradient(135deg, #fff0f5, #ffe6f0);
     padding: 3rem;
@@ -686,6 +744,8 @@
         Loading…
       </iframe>
     </div>
+</a>
+
 
     <!-- WhatsApp Confirmation Form -->
     <form id="whatsappForm" onsubmit="return checkGoogleFormSubmit()" data-aos="fade-up" data-aos-delay="300">
@@ -768,6 +828,12 @@
     <a href="https://wa.me/919032103077" target="_blank">
       <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
     </a>
+  </div>
+  <div>
+    <a href="https://instagram.com/pearlbeauty_hyd" class="floating-insta" target="_blank" title="Follow us on Instagram">
+  <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+</a>
+
   </div>
 
   <footer>
