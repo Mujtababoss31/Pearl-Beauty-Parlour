@@ -2,406 +2,302 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pearl Beauty Parlour</title>
-  <meta name="description"
-    content="Pearl Beauty Parlour - Bridal Makeovers, Skin Care, Hair Styling & more by Samena Khan. Enhance your glow today!" />
-  <link rel="icon" href="favicon.png" type="image/png">
-  <title>Pearl Beauty Parlour | Bridal Makeovers & Skin Care</title>
-<meta name="description" content="Pearl Beauty Parlour by Sameena Khan & Mujtaba Abdul Mannan offers stunning bridal makeup, hair styling, facials & more. Book now and enhance your glow!">
-<link rel="canonical" href="https://pearlbeautyparlour.com/" />
-<meta name="robots" content="index, follow">
-<meta property="og:title" content="Pearl Beauty Parlour">
-<meta property="og:description" content="Luxury bridal makeovers, facial treatments, and hair styling by Sameena Khan. Book your transformation today.">
-<meta property="og:image" content="https://pearlbeautyparlour.com/images/og-image.jpg"> <!-- replace with real image -->
-<meta property="og:url" content="https://pearlbeautyparlour.com/">
-<meta name="twitter:card" content="summary_large_image">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pearl Beauty Parlour</title>
+    <meta name="description"
+        content="Pearl Beauty Parlour - Bridal Makeovers, Skin Care, Hair Styling & more by Samena Khan. Enhance your glow today!" />
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Pearl Beauty Parlour | Bridal Makeovers & Skin Care</title>
+    <meta name="description"
+        content="Pearl Beauty Parlour by Sameena Khan & Mujtaba Abdul Mannan offers stunning bridal makeup, hair styling, facials & more. Book now and enhance your glow!">
+    <link rel="canonical" href="https://pearlbeautyparlour.com/" />
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Pearl Beauty Parlour">
+    <meta property="og:description"
+        content="Luxury bridal makeovers, facial treatments, and hair styling by Sameena Khan. Book your transformation today.">
+    <meta property="og:image" content="https://pearlbeautyparlour.com/images/og-image.jpg">
+    <!-- replace with real image -->
+    <meta property="og:url" content="https://pearlbeautyparlour.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" />
+
+    <!-- Custom Styles -->
+    <style>
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 1rem;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            background-color: #fff;
+        }
+
+        .light-bg {
+            background-color: #f9f9f9;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #eee;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card p {
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 1rem;
+            color: #333;
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: #fff;
+        }
+
+        body.dark-mode .section,
+        body.dark-mode .light-bg {
+            background-color: #1e1e1e;
+        }
+
+        body.dark-mode .card {
+            background-color: #2c2c2c;
+            color: #fff;
+        }
+    </style>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <img src="logo.png" alt="Pearl Beauty Logo" class="logo" />
+            <h1 class="welcome-text">Welcome to Pearl Beauty Parlour</h1>
+        </div>
+    </div>
+
+    <style>
+        #preloader {
+            position: fixed;
+            z-index: 9999;
+            background: linear-gradient(145deg, #fff0f5, #ffe4ec);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeOut 1s ease forwards;
+            animation-delay: 5s;
+        }
+
+        .insta-link {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .insta-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .insta-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
 
 
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@500&display=swap"
-    rel="stylesheet" />
+        .preloader-content {
+            text-align: center;
+            animation: popIn 1s ease-out;
+        }
 
-  <!-- AOS, Lightbox, Flatpickr -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+        .preloader-content .logo {
+            width: 120px;
+            height: auto;
+            animation: spinScale 5s ease-in-out infinite;
+        }
 
-  <style>
-    :root {
-      --primary: #e91e63;
-      --secondary: #ffe6f0;
-      --text: #3d3d3d;
-      --accent: #ff69b4;
-    }
+        .welcome-text {
+            margin-top: 1.5rem;
+            font-size: 1.8rem;
+            color: #e91e63;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+            animation: textGlow 2s infinite alternate;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-   body {
-      font-family: 'Playfair Display', serif;
-      color: var(--text);
-      background: url('image background.png') center/cover fixed no-repeat;
-    } 
+        @keyframes spinScale {
+            0% {
+                transform: scale(0.95) rotate(0deg);
+                opacity: 0.8;
+            }
 
+            50% {
+                transform: scale(1.1) rotate(180deg);
+                opacity: 1;
+            }
 
+            100% {
+                transform: scale(0.95) rotate(360deg);
+                opacity: 0.8;
+            }
+        }
 
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 10px #e91e63, 0 0 20px #f06292;
+            }
 
-    h1,
-    h2,
-    h4 {
-      font-family: 'Dancing Script', cursive;
-    }
+            to {
+                text-shadow: 0 0 20px #ec407a, 0 0 30px #e91e63;
+            }
+        }
 
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.95);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
 
-    .navbar h2 {
-      color: var(--primary);
-    }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
 
-    .navbar a {
-      text-decoration: none;
-      margin-left: 20px;
-      color: var(--text);
-      font-weight: bold;
-      transition: color 0.3s;
-    }
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
 
-    .navbar a:hover {
-      color: var(--primary);
-    }
+        .gallery img {
+            max-width: 280px;
+            border-radius: 12px;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
 
-    .hero {
-  background: url('backgroun hero section.jpg') center center / cover no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 60px;
-  position: relative;
-}
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
 
-/* Mobile Responsive Adjustments */
-@media (max-width: 768px) {
-  .hero {
-    height: 80vh; /* Reduce height for small screens */
-    background-position: center top;
-    background-size: cover;
-    padding-top: 40px;
-  }
-}
-@media (max-width: 768px) {
-  .hero {
-    height: 80vh;
-    background-position: center top;
-    background-size: cover;
-    padding-top: 40px;
-  }
-}
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
 
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--secondary);
+            font-size: 0.9rem;
+        }
+    </style>
+    <script>
+        function expandGallery() {
+            document.getElementById("gallery-box").style.display = "none";
+            document.getElementById("gallery-images").classList.remove("hidden");
+        }
+        function closeGallery() {
+            document.getElementById("gallery-images").classList.add("hidden");
+            document.getElementById("gallery-box").style.display = "block";
+        }
+    </script>
+    </style>
 
-    .overlay {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(8px);
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      padding: 50px 30px;
-      border-radius: 25px;
-      text-align: center;
-      color: white;
-      box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
-    }
-
-    .hero-title {
-      font-size: 3.2rem;
-      text-shadow: 0 0 12px #e91e63, 0 0 20px #fff;
-      margin-bottom: 15px;
-    }
-
-    .hero-subtext {
-      font-size: 1.4rem;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      border-radius: 30px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: var(--accent);
-    }
-
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-      color: white;
-    }
-
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 30px;
-    }
-
-    .card {
-      background: white;
-      color: var(--text);
-      width: 250px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-    }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .testimonial {
-      background: white;
-      color: var(--text);
-      max-width: 500px;
-      margin: 15px auto;
-      padding: 20px;
-      border-radius: 10px;
-      border-left: 6px solid var(--primary);
-    }
-
-    .gallery img {
-      max-width: 280px;
-      border-radius: 12px;
-      margin: 10px;
-      transition: transform 0.3s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: var(--secondary);
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
 
- </div>
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="preloader-content">
-      <img src="logo.png" alt="Pearl Beauty Logo" class="logo" />
-      <h1 class="welcome-text">Welcome to Pearl Beauty Parlour</h1>
-    </div>
-  </div><body>
-  <div class="navbar">
-    <div style="display: flex; align-items: center;">
-      <img src="logo.png" alt="Pearl Beauty Logo" style="height: 50px; margin-right: 10px;">
-      <h2>Pearl Beauty</h2>
-      <a href="https://instagram.com/pearlbeauty_hyd" target="_blank">
-   Follow us on Instagram for latest offers!
-  
+<body>
 
-</a>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container flex">
+            <a href="#" class="logo">Pearl Beauty Parlour</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#makeovers">Makeovers</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#book" class="btn">Book Now</a></li>
+                    <li><button id="darkModeToggle"><i class="fas fa-moon"></i></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    </div>
-  <div>
-      <a href="#services">Services</a>
-      <a href="#makeovers">Makeovers</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#booking">Book</a>
-    </div>
-
-
-  </div>
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="preloader-content">
-      <img src="logo.png" alt="Pearl Beauty Logo" class="logo" />
-      <h1 class="welcome-text">Welcome to Pearl Beauty Parlour</h1>
-    </div>
-  </div>
-
-  <style>
-    #preloader {
-      position: fixed;
-      z-index: 9999;
-      background: linear-gradient(145deg, #fff0f5, #ffe4ec);
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: fadeOut 1s ease forwards;
-      animation-delay: 5s;
-    }
-  .insta-link {
-  display: inline-flex;
-  align-items: center;
-  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.insta-link:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.insta-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-
-
-    .preloader-content {
-      text-align: center;
-      animation: popIn 1s ease-out;
-    }
-
-    .preloader-content .logo {
-      width: 120px;
-      height: auto;
-      animation: spinScale 5s ease-in-out infinite;
-    }
-
-    .welcome-text {
-      margin-top: 1.5rem;
-      font-size: 1.8rem;
-      color: #e91e63;
-      font-family: 'Playfair Display', serif;
-      letter-spacing: 1px;
-      animation: textGlow 2s infinite alternate;
-    }
-
-    @keyframes spinScale {
-      0% {
-        transform: scale(0.95) rotate(0deg);
-        opacity: 0.8;
-      }
-
-      50% {
-        transform: scale(1.1) rotate(180deg);
-        opacity: 1;
-      }
-
-      100% {
-        transform: scale(0.95) rotate(360deg);
-        opacity: 0.8;
-      }
-    }
-
-    @keyframes textGlow {
-      from {
-        text-shadow: 0 0 10px #e91e63, 0 0 20px #f06292;
-      }
-
-      to {
-        text-shadow: 0 0 20px #ec407a, 0 0 30px #e91e63;
-      }
-    }
-
-    @keyframes popIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.8);
-      }
-
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-  </style>
-
-  <script>
-    // Optional: ensure preloader hides after 5s even if page hasn't loaded
-    setTimeout(() => {
-      document.getElementById('preloader').style.display = 'none';
-    }, 5100);
-  </script>
-  
-
-
-  <!-- Hero -->
-  <div class="hero">
-    <div class="overlay" data-aos="zoom-in">
-      <h1 class="hero-title">Welcome to Pearl Beauty Parlour</h1>
-      <p class="hero-subtext">Unveil your elegance with expert care by <strong>Samena Khan</strong></p>
-      <a href="#services" class="btn">Discover Your Glow</a>
- 
-
-      
-
-    </div>
-  </div>
-  <div>
- 
-
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="backgroun hero section.jpg" alt="Hero Image" class="hero-image">
+        <div class="overlay-text">
+            <h1>Show Your Beauty</h1>
+            <p>Transformative Looks, Timeless Elegance</p>
+            <a href="#book" class="btn">Book Your Appointment</a>
+        </div>
+    </section>
     <!-- Offer Badge Inside Hero -->
-<div id="hero-offer" style="
+    <div id="hero-offer" style="
   position: absolute;
-  top: 500px;
+  top: 350px;
   CENTRE: 245px;
   background: radial-gradient(circle, #e48ebc, #dc4c94);
   color: rgb(32, 23, 23);
@@ -423,438 +319,541 @@
   transform: rotate(-10deg);
   border-style: ridge;
 ">
-  🎉<br>20%<br>OFF <br>Book online to avail offer...
-</div>
+        🎉<br>20%<br>OFF <br>Book online to avail offer...
+    </div>
 
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About us</h2>
+            <div class="flex about-content" data-aos="fade-up" data-aos-delay="100">
+                <div class="about-text">
+                    <p>We are a team of professional makeup artists, skincare specialists, and hairstylists dedicated to
+                        making every woman feel like royalty.</p>
+                    <p>From bridal looks to photoshoot glam, we offer personalized services that enhance your natural
+                        beauty.</p>
+                </div>
+                <img src="about.png" alt="About Pearl Beauty" data-aos="zoom-in" data-aos-delay="200">
+            </div>
+        </div>
+    </section>
     <div>
 
 
-  <!-- Services -->
-  <section id="services" class="section" data-aos="fade-up">
-    <h2>Our Signature Services</h2>
-    <div class="cards">
-      <div class="card" onclick="location.href='BRIDAL.html'"><img src="IMAGE bridal1.PNG" alt="Bridal Makeup">
-        <p>Bridal Makeup</p>
-      </div>
-      <div class="card" onclick="location.href='skin care and facial.html'"><img src="IMAGEfacial.png" alt="Facials">
-        <p>Skin Care & Facials</p>
-      </div>
-      <div class="card" onclick="location.href='hair style.html'"><img src="image hairstyling.png" alt="Hair Styling">
-        <p>Hair Styling</p>
-      </div>
+        <!-- Services -->
+        <section id="services" class="section" data-aos="fade-up">
+            <h2>Our Signature Services</h2>
+            <div class="cards">
+                <div class="card" onclick="location.href='BRIDAL.html'"><img src="IMAGE bridal1.PNG"
+                        alt="Bridal Makeup">
+                    <p>Bridal Makeup</p>
+                </div>
+                <div class="card" onclick="location.href='skin care and facial.html'"><img src="IMAGEfacial.png"
+                        alt="Facials">
+                    <p>Skin Care & Facials</p>
+                </div>
+                <div class="card" onclick="location.href='hair style.html'"><img src="image hairstyling.png"
+                        alt="Hair Styling">
+                    <p>Hair Styling</p>
+                </div>
 
-      <div class="card" onclick="location.href='hd-makeup.html'">
-        <img src="hd makeup.jpg" alt="HD Makeup">
-        <p>HD Makeup</p>
-      </div>
+                <div class="card" onclick="location.href='hd-makeup.html'">
+                    <img src="hd makeup.jpg" alt="HD Makeup">
+                    <p>HD Makeup</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Makeovers -->
+        <section id="makeovers" class="section" data-aos="fade-up">
+            <h2>Our Stunning Makeovers</h2>
+            <div class="cards">
+                <div class="card" onclick="location.href='traditional bridalglam.html'"><img
+                        src="image traditional bridal glam.png" alt="Traditional Bridal Glam">
+                    <p>Traditional Bridal Glam</p>
+                </div>
+                <div class="card" onclick="location.href='presicion makeup.html'"><img
+                        src="IMAGERoyal Bridal Elegance2.PNG" alt="Precision Makeup">
+                    <p>Precision Makeup Application</p>
+                </div>
+                <div class="card" onclick="location.href='royal bridal.html'"><img
+                        src="IMAGEPrecision Makeup Application3.PNG" alt="Royal Bridal Elegance">
+                    <p>Royal Bridal Elegance</p>
+                </div>
+
+
+                <div class="card" onclick="location.href='reception-makeup.html'">
+                    <img src="reception make up .jpg" alt="Reception Makeup">
+                    <p>Reception Makeup</p>
+                </div>
+
+                <div class="card" onclick="location.href='engagement-makeup.html'">
+                    <img src="engagement makeup .jpg" alt="Engagement Makeup">
+                    <p>Engagement Makeup</p>
+                </div>
+
+
+
+
+            </div>
+
     </div>
-  </section>
+    </section>
 
-  <!-- Makeovers -->
-  <section id="makeovers" class="section" data-aos="fade-up">
-    <h2>Our Stunning Makeovers</h2>
-    <div class="cards">
-      <div class="card" onclick="location.href='traditional bridalglam.html'"><img
-          src="image traditional bridal glam.png" alt="Traditional Bridal Glam">
-        <p>Traditional Bridal Glam</p>
-      </div>
-      <div class="card" onclick="location.href='presicion makeup.html'"><img src="IMAGERoyal Bridal Elegance2.PNG"
-          alt="Precision Makeup">
-        <p>Precision Makeup Application</p>
-      </div>
-      <div class="card" onclick="location.href='royal bridal.html'"><img src="IMAGEPrecision Makeup Application3.PNG"
-          alt="Royal Bridal Elegance">
-        <p>Royal Bridal Elegance</p>
-      </div>
+    <!-- Testimonials -->
+    <section id="testimonials" class="section" data-aos="zoom-in">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <p>"Samena is a magician! My bridal look was flawless."</p>
+            <h4>- Ayesha R.</h4>
+        </div>
+        <div class="testimonial">
+            <p>"My skin never felt better. Great service!"</p>
+            <h4>- Sneha M.</h4>
+        </div>
+        <div class="testimonial">
+            <p>"I felt like a queen. Thank you!"</p>
+            <h4>- Zara K.</h4>
+        </div>
+        <h3>Video Testimonials</h3>
+        <iframe width="360" height="200" src="https://www.youtube.com/embed/1Q8fG0TtVAY" allowfullscreen></iframe>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section gallery" data-aos="fade-up">
+        <h1>Our Work</h1>
+        <div id="gallery-box" class="gallery-box" onclick="expandGallery()">
+            <h3 class="gallery-title">✨ Unveil the Magic ✨</h3>
+            <p class="gallery-subtext">Explore the glow we've crafted for every face...</p>
+            <button class="btn explore-btn">Explore Work</button>
+        </div>
+        <div id="gallery-images" class="gallery-images hidden">
+            <button class="btn close-btn" onclick="closeGallery()">Close Gallery</button>
+            <div class="gallery-grid">
+                <a href="our work image 1.jpg" class="glightbox"><img src="our work image 1.jpg" alt="Gallery Img"></a>
+                <a href="our work image 2.jpg" class="glightbox"><img src="our work image 2.jpg" alt="Gallery Img"></a>
+                <a href="our work image 3.jpg" class="glightbox"><img src="our work image 3.jpg" alt="Gallery Img"></a>
+                <a href="our work image 4.jpg" class="glightbox"><img src="our work image 4.jpg" alt="Gallery Img"></a>
+                <a href="our work image 5.jpg" class="glightbox"><img src="our work image 5.jpg" alt="Gallery Img"></a>
+                <a href="our work image 6.jpg" class="glightbox"><img src="our work image 6.jpg" alt="Gallery Img"></a>
+                <a href="our work image 7.jpg" class="glightbox"><img src="our work image 7.jpg" alt="Gallery Img"></a>
+                <a href="our work image 8.PNG" class="glightbox"><img src="our work image 8.PNG" alt="Gallery Img"></a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .floating-insta {
+            position: fixed;
+            bottom: 90px;
+            /* Adjust to sit above WhatsApp */
+            right: 20px;
+            z-index: 999;
+            background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            animation: bounce 2s infinite;
+        }
+
+        .floating-insta img {
+            width: 30px;
+            height: 30px;
+            display: block;
+            filter: brightness(100%);
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        .gallery-box {
+            background: linear-gradient(135deg, #c62a5e, #ca4278);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(252, 80, 80, 0.2);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        .gallery-title {
+            font-size: 2rem;
+            color: var(--primary);
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .gallery-subtext {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin: 1rem 0 1.5rem;
+        }
+
+        .explore-btn,
+        .close-btn {
+            background: var(--primary);
+            border: none;
+            color: rgb(239, 226, 38);
+            padding: 0.8rem 1.6rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+
+        .explore-btn:hover,
+        .close-btn:hover {
+            background: var(--accent);
+        }
+
+        .gallery-images {
+            text-align: center;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .gallery-images.hidden {
+            display: none;
+        }
+
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .gallery-grid img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(217, 21, 126, 0.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <script>
+        function expandGallery() {
+            document.getElementById("gallery-box").style.display = "none";
+            document.getElementById("gallery-images").classList.remove("hidden");
+        }
+        function closeGallery() {
+            document.getElementById("gallery-images").classList.add("hidden");
+            document.getElementById("gallery-box").style.display = "block";
+        }
+    </script>
+    <script>
+        function expandGallery() {
+            document.getElementById("gallery-box").style.display = "none";
+            document.getElementById("gallery-images").classList.remove("hidden");
+        }
+        function closeGallery() {
+            document.getElementById("gallery-images").classList.add("hidden");
+            document.getElementById("gallery-box").style.display = "block";
+        }
+    </script>
+    <!-- Booking Section -->
+    <section id="booking" data-aos="fade-up">
+        <style>
+            #booking {
+                background: url('background-beauty.jpg') center center / cover no-repeat fixed;
+                padding: 4rem 1rem;
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+                color: #333;
+            }
+
+            #booking .container {
+                max-width: 900px;
+                margin: auto;
+                text-align: center;
+            }
+
+            #booking h2 {
+                font-family: 'Playfair Display', serif;
+                font-size: 2.5rem;
+                color: #e91e63;
+                margin-bottom: 2rem;
+            }
+
+            #booking button {
+                padding: 1rem 2rem;
+                background-color: #e91e63;
+                border: none;
+                border-radius: 30px;
+                color: rgb(200, 18, 127);
+                font-weight: bold;
+                font-size: 1.1rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            #booking button:hover {
+                background-color: #e79f1b;
+            }
+
+            #googleForm {
+                margin-top: 2rem;
+                display: none;
+                transition: all 0.5s ease-in-out;
+            }
+
+            #googleForm iframe {
+                width: 100%;
+                height: 1200px;
+                border: none;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(218, 9, 131, 0.2);
+            }
+
+            #whatsappForm {
+                margin-top: 2.5rem;
+                background: #ebe5e9;
+                padding: 2rem;
+                border-radius: 20px;
+                box-shadow: 0 8px 30px rgba(103, 3, 58, 0.1);
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #whatsappForm h3 {
+                color: #99ba14;
+                margin-bottom: 1.5rem;
+            }
+
+            #whatsappForm input,
+            #whatsappForm button {
+                width: 100%;
+                padding: 0.8rem;
+                margin-bottom: 1rem;
+                border-radius: 10px;
+                border: 1px solid #ef2568;
+                font-size: 1rem;
+            }
+
+            #whatsappForm button {
+                background-color: #4caf50;
+                color: white;
+                font-weight: bold;
+                border-radius: 30px;
+                cursor: pointer;
+                border: none;
+            }
+
+            @media (max-width: 768px) {
+                #booking {
+                    background-attachment: scroll !important;
+                    background-position: center top;
+                    padding: 3rem 1rem;
+                }
+
+                #booking h2 {
+                    font-size: 1.8rem;
+                    line-height: 1.4;
+                }
+
+                #googleForm iframe {
+                    height: 1000px;
+                }
+            }
+        </style>
+
+        <div class="container">
+            <h2>Book Your Glow <br />Click To Open Google Order Form</h2>
+
+            <!-- Reveal Google Form Button -->
+            <button onclick="toggleGoogleForm()">Start Booking</button>
+
+            <!-- Google Form Embed -->
+            <div id="googleForm">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfz0SfMmyA3w22t8Gafi_KAhDEkpEWaExbAYi69a9zhGyNuSg/viewform?embedded=true">
+                    Loading…
+                </iframe>
+            </div>
+            </a>
 
 
-      <div class="card" onclick="location.href='reception-makeup.html'">
-        <img src="reception make up .jpg" alt="Reception Makeup">
-        <p>Reception Makeup</p>
-      </div>
+            <!-- WhatsApp Confirmation Form -->
+            <form id="whatsappForm" onsubmit="return checkGoogleFormSubmit()" data-aos="fade-up" data-aos-delay="300">
+                <h3>First submit the Google Form, then confirm via WhatsApp</h3>
+                <input type="text" id="wname" placeholder="Your Name" required />
+                <input type="text" id="wservice" placeholder="Service Name" required />
+                <input type="date" id="wdate" required />
+                <button type="submit">Send on WhatsApp</button>
+                <p id="formError" style="color: red; display: none;">⚠️ Please submit the Google Form first!</p>
+            </form>
+        </div>
+    </section>
 
-      <div class="card" onclick="location.href='engagement-makeup.html'">
-        <img src="engagement makeup .jpg" alt="Engagement Makeup">
-        <p>Engagement Makeup</p>
-      </div>
+    <script>
+        function toggleGoogleForm() {
+            const form = document.getElementById("googleForm");
+            form.style.display = form.style.display === "none" ? "block" : "none";
+        }
+
+        function checkGoogleFormSubmit() {
+            const formShown = document.getElementById("googleForm").style.display === "block";
+            if (!formShown) {
+                document.getElementById("formError").style.display = "block";
+                return false;
+            }
+            document.getElementById("formError").style.display = "none";
+
+            const name = document.getElementById("wname").value;
+            const service = document.getElementById("wservice").value;
+            const date = document.getElementById("wdate").value;
+
+            const whatsappURL =
+                `https://wa.me/919032103077?text=Hi! My name is ${encodeURIComponent(name)}. I have booked for ${encodeURIComponent(service)} on ${encodeURIComponent(date)} via your website.`;
+
+            window.open(whatsappURL, "_blank");
+            return false;
+        }
+    </script>
+
+    </script>
+
+
+    <!-- AOS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        function toggleGoogleForm() {
+            const form = document.getElementById('googleForm');
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+
+        let formSubmitted = false;
+
+        // Simulate form submission after iframe loads for demo (can be linked to real Google Sheet backend)
+        const iframe = document.querySelector('#googleForm iframe');
+        iframe.addEventListener('load', () => {
+            setTimeout(() => {
+                formSubmitted = true; // this should be replaced with backend tracking or Google Apps Script cache
+            }, 10000); // assume form is filled in 10s (for demo only)
+        });
+
+        function checkGoogleFormSubmit() {
+            if (!formSubmitted) {
+                document.getElementById('formError').style.display = 'block';
+                return false;
+            }
+            const name = document.getElementById('wname').value;
+            const service = document.getElementById('wservice').value;
+            const date = document.getElementById('wdate').value;
+            const url = `https://wa.me/91 9032103077?text=Hi, I have submitted the Google Form. I would like to book *${service}* on *${date}*. My name is *${name}*.`;
+            window.open(url, '_blank');
+            return false;
+        }
+    </script>
 
 
 
+    <div class="whatsapp-float">
+        <a href="https://wa.me/919032103077" target="_blank">
+            <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+        </a>
+    </div>
+    <div>
+        <a href="https://instagram.com/pearlbeauty_hyd" class="floating-insta" target="_blank"
+            title="Follow us on Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+        </a>
 
+
+        <!-- Contact -->
+        <section id="contact" class="section light-bg">
+            <div class="container">
+                <h2 data-aos="fade-up">Contact Us</h2>
+                <div class="flex contact-info" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info">
+                        <p><i class="fas fa-map-marker-alt"></i>cafe al habeeb,pearlbeauty_hyd,hyderabad</p>
+                        <p><i class="fas fa-phone"></i> +91 9032103077</p>
+                        <p><i class="fas fa-envelope"></i>parlourpearlbeauty@gmail.com</p>
+                        <div class="socials">
+                            <a href="pearlbeauty_hyd"><i class="fab fa-instagram"></i></a>
+                            <a href="pearlbeautyparlour"><i class="fab fa-facebook"></i></a>
+                            <a href="+919032103077"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <section class="map-section" data-aos="fade-up">
+                        <div class="map-container">
+                            <h2><i class="fas fa-map-marker-alt"></i> Our Location</h2>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30467.681353611613!2d78.4532424!3d17.3415764!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9764f41196a1%3A0xa2edfa5caa6fff26!2sCAFE%20AL%20HABEEB!5e0!3m2!1sen!2sin!4v1750768004661!5m2!1sen!2sin"
+                                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </section>
+
+                </div>
+        </section>
+        <div class="whatsapp-float">
+            <a href="https://wa.me/919032103077" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+            </a>
+        </div>
+        <div>
+            <a href="https://instagram.com/pearlbeauty_hyd" class="floating-insta" target="_blank"
+                title="Follow us on Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+            </a>
+
+        </div>
     </div>
 
-    </div>
-  </section>
+    <footer>
+        <p>© 2025 Pearl Beauty Parlour | Crafted for Samena Khan</p>
+    </footer>
 
-  <!-- Testimonials -->
-  <section id="testimonials" class="section" data-aos="zoom-in">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial">
-      <p>"Samena is a magician! My bridal look was flawless."</p>
-      <h4>- Ayesha R.</h4>
-    </div>
-    <div class="testimonial">
-      <p>"My skin never felt better. Great service!"</p>
-      <h4>- Sneha M.</h4>
-    </div>
-    <div class="testimonial">
-      <p>"I felt like a queen. Thank you!"</p>
-      <h4>- Zara K.</h4>
-    </div>
-    <h3>Video Testimonials</h3>
-    <iframe width="360" height="200" src="https://www.youtube.com/embed/1Q8fG0TtVAY" allowfullscreen></iframe>
-  </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        AOS.init();
+        const lightbox = GLightbox();
 
-  <!-- Gallery -->
-<section id="gallery" class="section gallery" data-aos="fade-up">
-  <h2>Our Work</h2>
-  <div id="gallery-box" class="gallery-box" onclick="expandGallery()">
-    <h3 class="gallery-title">✨ Unveil the Magic ✨</h3>
-    <p class="gallery-subtext">Explore the glow we've crafted for every face...</p>
-    <button class="btn explore-btn">Explore Work</button>
-  </div>
-  <div id="gallery-images" class="gallery-images hidden">
-    <button class="btn close-btn" onclick="closeGallery()">Close Gallery</button>
-    <div class="gallery-grid">
-      <a href="our work image 1.jpg" class="glightbox"><img src="our work image 1.jpg" alt="Gallery Img"></a>
-      <a href="our work image 2.jpg" class="glightbox"><img src="our work image 2.jpg" alt="Gallery Img"></a>
-      <a href="our work image 3.jpg" class="glightbox"><img src="our work image 3.jpg" alt="Gallery Img"></a>
-      <a href="our work image 4.jpg" class="glightbox"><img src="our work image 4.jpg" alt="Gallery Img"></a>
-      <a href="our work image 5.jpg" class="glightbox"><img src="our work image 5.jpg" alt="Gallery Img"></a>
-      <a href="our work image 6.jpg" class="glightbox"><img src="our work image 6.jpg" alt="Gallery Img"></a>
-      <a href="our work image 7.jpg" class="glightbox"><img src="our work image 7.jpg" alt="Gallery Img"></a>
-      <a href="our work image 8.PNG" class="glightbox"><img src="our work image 8.PNG" alt="Gallery Img"></a>
-    </div>
-  </div>
-</section>
-
-<style>
-  .floating-insta {
-  position: fixed;
-  bottom: 90px; /* Adjust to sit above WhatsApp */
-  right: 20px;
-  z-index: 999;
-  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  animation: bounce 2s infinite;
-}
-
-.floating-insta img {
-  width: 30px;
-  height: 30px;
-  display: block;
-  filter: brightness(100%);
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-  .gallery-box {
-    background: linear-gradient(135deg, #fff0f5, #ffe6f0);
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    margin: 0 auto;
-    max-width: 600px;
-  }
-  .gallery-title {
-    font-size: 2rem;
-    color: var(--primary);
-    font-family: 'Dancing Script', cursive;
-  }
-  .gallery-subtext {
-    font-size: 1.1rem;
-    color: var(--text);
-    margin: 1rem 0 1.5rem;
-  }
-  .explore-btn, .close-btn {
-    background: var(--primary);
-    border: none;
-    color: white;
-    padding: 0.8rem 1.6rem;
-    border-radius: 30px;
-    font-size: 1rem;
-    transition: background 0.3s ease;
-    margin-bottom: 1.5rem;
-  }
-  .explore-btn:hover, .close-btn:hover {
-    background: var(--accent);
-  }
-  .gallery-images {
-    text-align: center;
-    animation: fadeIn 1s ease-out forwards;
-  }
-  .gallery-images.hidden {
-    display: none;
-  }
-  .gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .gallery-grid img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-</style>
-
-<script>
-  function expandGallery() {
-    document.getElementById("gallery-box").style.display = "none";
-    document.getElementById("gallery-images").classList.remove("hidden");
-  }
-  function closeGallery() {
-    document.getElementById("gallery-images").classList.add("hidden");
-    document.getElementById("gallery-box").style.display = "block";
-  }
-</script>
-<!-- Booking Section -->
-<section id="booking" data-aos="fade-up">
-  <style>
-    #booking {
-      background: url('background-beauty.jpg') center center / cover no-repeat fixed;
-      padding: 4rem 1rem;
-      background-size: cover;
-      background-position: center center;
-      background-attachment: fixed;
-      color: #333;
-    }
-
-    #booking .container {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    #booking h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      color: #e91e63;
-      margin-bottom: 2rem;
-    }
-
-    #booking button {
-      padding: 1rem 2rem;
-      background-color: #e91e63;
-      border: none;
-      border-radius: 30px;
-      color: white;
-      font-weight: bold;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    #booking button:hover {
-      background-color: #c2185b;
-    }
-
-    #googleForm {
-      margin-top: 2rem;
-      display: none;
-      transition: all 0.5s ease-in-out;
-    }
-
-    #googleForm iframe {
-      width: 100%;
-      height: 1200px;
-      border: none;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    #whatsappForm {
-      margin-top: 2.5rem;
-      background: #ffffff;
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    #whatsappForm h3 {
-      color: #6a1b9a;
-      margin-bottom: 1.5rem;
-    }
-
-    #whatsappForm input,
-    #whatsappForm button {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    #whatsappForm button {
-      background-color: #4caf50;
-      color: white;
-      font-weight: bold;
-      border-radius: 30px;
-      cursor: pointer;
-      border: none;
-    }
-
-    @media (max-width: 768px) {
-      #booking {
-        background-attachment: scroll !important;
-        background-position: center top;
-        padding: 3rem 1rem;
-      }
-
-      #booking h2 {
-        font-size: 1.8rem;
-        line-height: 1.4;
-      }
-
-      #googleForm iframe {
-        height: 1000px;
-      }
-    }
-  </style>
-
-  <div class="container">
-    <h2>Book Your Glow <br />Click To Open Google Order Form</h2>
-
-    <!-- Reveal Google Form Button -->
-    <button onclick="toggleGoogleForm()">Start Booking</button>
-
-    <!-- Google Form Embed -->
-    <div id="googleForm">
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfz0SfMmyA3w22t8Gafi_KAhDEkpEWaExbAYi69a9zhGyNuSg/viewform?embedded=true">
-        Loading…
-      </iframe>
-    </div>
-</a>
-
-
-    <!-- WhatsApp Confirmation Form -->
-    <form id="whatsappForm" onsubmit="return checkGoogleFormSubmit()" data-aos="fade-up" data-aos-delay="300">
-      <h3>First submit the Google Form, then confirm via WhatsApp</h3>
-      <input type="text" id="wname" placeholder="Your Name" required />
-      <input type="text" id="wservice" placeholder="Service Name" required />
-      <input type="date" id="wdate" required />
-      <button type="submit">Send on WhatsApp</button>
-      <p id="formError" style="color: red; display: none;">⚠️ Please submit the Google Form first!</p>
-    </form>
-  </div>
-</section>
-
-<script>
-  function toggleGoogleForm() {
-    const form = document.getElementById("googleForm");
-    form.style.display = form.style.display === "none" ? "block" : "none";
-  }
-
-  function checkGoogleFormSubmit() {
-    const formShown = document.getElementById("googleForm").style.display === "block";
-    if (!formShown) {
-      document.getElementById("formError").style.display = "block";
-      return false;
-    }
-    document.getElementById("formError").style.display = "none";
-
-    const name = document.getElementById("wname").value;
-    const service = document.getElementById("wservice").value;
-    const date = document.getElementById("wdate").value;
-
-    const whatsappURL =
-      `https://wa.me/919032103077?text=Hi! My name is ${encodeURIComponent(name)}. I have booked for ${encodeURIComponent(service)} on ${encodeURIComponent(date)} via your website.`;
-
-    window.open(whatsappURL, "_blank");
-    return false;
-  }
-</script>
-
-</script>
-
-
-  <!-- AOS Library -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-
-    function toggleGoogleForm() {
-      const form = document.getElementById('googleForm');
-      form.style.display = form.style.display === 'none' ? 'block' : 'none';
-    }
-
-    let formSubmitted = false;
-
-    // Simulate form submission after iframe loads for demo (can be linked to real Google Sheet backend)
-    const iframe = document.querySelector('#googleForm iframe');
-    iframe.addEventListener('load', () => {
-      setTimeout(() => {
-        formSubmitted = true; // this should be replaced with backend tracking or Google Apps Script cache
-      }, 10000); // assume form is filled in 10s (for demo only)
-    });
-
-    function checkGoogleFormSubmit() {
-      if (!formSubmitted) {
-        document.getElementById('formError').style.display = 'block';
-        return false;
-      }
-      const name = document.getElementById('wname').value;
-      const service = document.getElementById('wservice').value;
-      const date = document.getElementById('wdate').value;
-      const url = `https://wa.me/91 9032103077?text=Hi, I have submitted the Google Form. I would like to book *${service}* on *${date}*. My name is *${name}*.`;
-      window.open(url, '_blank');
-      return false;
-    }
-  </script>
-
-
-
-  <div class="whatsapp-float">
-    <a href="https://wa.me/919032103077" target="_blank">
-      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
-    </a>
-  </div>
-  <div>
-    <a href="https://instagram.com/pearlbeauty_hyd" class="floating-insta" target="_blank" title="Follow us on Instagram">
-  <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
-</a>
-
-  </div>
-
-  <footer>
-    <p>© 2025 Pearl Beauty Parlour | Crafted for Samena Khan</p>
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script>
-    AOS.init();
-    const lightbox = GLightbox();
-
-    document.getElementById("miniForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const name = document.getElementById("mininame").value;
-      const phone = document.getElementById("miniphone").value;
-      const service = document.getElementById("miniservice").value;
-      const msg = `Hi, I have submitted the booking form.\n\nName: ${name}\nPhone: ${phone}\nService: ${service}`;
-      window.location.href = `https://wa.me/919032103077?text=${encodeURIComponent(msg)}`;
-    });
-  </script>
+        document.getElementById("miniForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const name = document.getElementById("mininame").value;
+            const phone = document.getElementById("miniphone").value;
+            const service = document.getElementById("miniservice").value;
+            const msg = `Hi, I have submitted the booking form.\n\nName: ${name}\nPhone: ${phone}\nService: ${service}`;
+            window.location.href = `https://wa.me/919032103077?text=${encodeURIComponent(msg)}`;
+        });
+    </script>
+    <script>
+        // Dark Mode Toggle
+        document.getElementById("darkModeToggle").addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+        });
+    </script>
 </body>
 
 </html>
