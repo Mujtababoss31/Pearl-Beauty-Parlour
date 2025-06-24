@@ -110,7 +110,7 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  max-height: 600px;
+  max-height: 700px;
   object-fit: cover;
 }
 
@@ -124,12 +124,12 @@ body {
 }
 
 .overlay-text h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .overlay-text p {
-  font-size: 1.3rem;
+  font-size: 1.0rem;
   margin-bottom: 2rem;
 }
 
