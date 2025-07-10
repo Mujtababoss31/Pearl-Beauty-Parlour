@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pearl Beauty Login</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <img src="logo.png" alt="Pearl Logo" class="logo" />
+      <h1>Pearl Beauty Parlour</h1>
+      <p>Sign in with</p>
+
+      <button class="btn google">🔴 Continue with Google</button>
+    </div>
+
+    <div class="image-box">
+      <img src="a.png" alt="Art" />
+    </div>
+  </div>
+
+  <!-- ✅ Firebase + Login Script -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+    import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+
+    // ✅ Firebase Config
+    const firebaseConfig = {
+      apiKey: "AIzaSyC1o-UPv3knLgILidyGQP9opH85lFFzBts",
+      authDomain: "pearlbeautyparlour-374e7.firebaseapp.com",
+      projectId: "pearlbeautyparlour-374e7",
+      storageBucket: "pearlbeautyparlour-374e7.appspot.com",
+      messagingSenderId: "415311970981",
+      appId: "1:415311970981:web:cc3b83eb0ecd7cfa84834c"
+    };
+
+    // ✅ Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+
+    // ✅ Handle Google login button click
+    const googleBtn = document.querySelector(".google");
+    if (googleBtn) {
+      googleBtn.addEventListener("click", () => {
+        signInWithPopup(auth, provider)
+          .then((result) => {
+            const user = result.user;
+            const userData = {
+              name: user.displayName,
+              email: user.email,
+              photo: user.photoURL || null,
+            };
+
+            localStorage.setItem("user", JSON.stringify(userData));
+            alert("Welcome " + user.displayName);
+
+            // ✅ Redirect after login
+            window.location.href = "index.html";
+          })
+          .catch((error) => {
+            console.error("Login failed:", error);
+            alert("Login failed. Try again.");
+          });
+      });
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+

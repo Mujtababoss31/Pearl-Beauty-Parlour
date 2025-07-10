@@ -21,6 +21,12 @@
     <meta property="og:url" content="https://pearlbeautyparlour.com/">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="style.css">
+    <!-- in index.html -->
+    <meta content="0; url=login.html" />
+    <title>Redirecting to Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -31,7 +37,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous" />
-       
+
 
     <!-- Custom Styles -->
     <style>
@@ -111,7 +117,6 @@
         }
     </style>
     <style>
-
         .insta-link {
             display: inline-flex;
             align-items: center;
@@ -259,6 +264,28 @@
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#book" class="btn">Book Now</a></li>
                     <li><button id="darkModeToggle"><i class="fas fa-moon"></i></button></li>
+                    <div class="nav-right">
+                        <div class="user-profile" onclick="toggleDropdown()">
+                            <img id="userImage" class="profile-img" src="" alt="User" />
+                            <div id="userInitials" class="initials-circle">M</div>
+                            <!-- Profile in Navbar -->
+                            <!-- Navbar User Profile -->
+                            <div id="user-profile" style="display: none; position: relative;">
+                                <img id="user-photo" src="" alt="Profile"
+                                    style="width: 40px; height: 40px; border-radius: 50%; cursor: pointer;" />
+
+                                <!-- Dropdown menu -->
+                                <div id="user-menu" class="hidden"
+                                    style="position: absolute; top: 50px; right: 0; background: white; padding: 10px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+                                    <p id="user-email" style="margin: 0; font-size: 14px;"></p>
+                                    <button id="logout-btn" style="margin-top: 8px; padding: 6px 10px;">Logout</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </ul>
             </nav>
         </div>
@@ -270,8 +297,16 @@
         <div class="overlay-text">
             <h1>Show Your Beauty</h1>
             <p>Transformative Looks, Timeless Elegance</p>
-            <a href="#book" class="btn">Book Your Appointment</a>
-        </div>
+            <div class="hero-buttons">
+                <button id="book-btn" class="sexy-book-btn">
+                    💖 Book Appointment
+                </button>
+
+
+                <button class="hero-btn secondary" onclick="goToLogin()">Get Started</button>
+            </div>
+
+
     </section>
     <!-- Offer Badge Inside Hero -->
     <div id="hero-offer" style="
@@ -315,35 +350,36 @@
                 </div>
                 <img src="about.png" alt="About Pearl Beauty" data-aos="zoom-in" data-aos-delay="200">
                 <!-- Instagram Follow Button -->
-<a href="https://www.instagram.com/pearlbeauty_hyd/" 
-   target="_blank" 
-   class="insta-button">
-  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="insta-icon" />
-  Follow us on Instagram @pearlbeauty_hyd
-</a>
+                <a href="https://www.instagram.com/pearlbeauty_hyd/" target="_blank" class="insta-button">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"
+                        class="insta-icon" />
+                    Follow us on Instagram @pearlbeauty_hyd
+                </a>
 
-<style>
-.insta-button {
-  display: inline-flex;
-  align-items: center;
-  background: #e1306c;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-.insta-button:hover {
-  background: #c72e63;
-}
-.insta-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-}
-</style>
+                <style>
+                    .insta-button {
+                        display: inline-flex;
+                        align-items: center;
+                        background: #e1306c;
+                        color: white;
+                        padding: 10px 16px;
+                        border-radius: 30px;
+                        text-decoration: none;
+                        font-weight: bold;
+                        transition: background 0.3s ease;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                    }
+
+                    .insta-button:hover {
+                        background: #c72e63;
+                    }
+
+                    .insta-icon {
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 10px;
+                    }
+                </style>
 
             </div>
         </div>
@@ -749,6 +785,8 @@
     </script>
 
 
+
+
     <!-- AOS Library -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
@@ -865,7 +903,152 @@
         document.getElementById("darkModeToggle").addEventListener("click", function () {
             document.body.classList.toggle("dark-mode");
         });
+        <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // ✅ GET STARTED BUTTON
+    const getStartedBtn = document.getElementById("get-started-btn");
+            if (getStartedBtn) {
+                getStartedBtn.addEventListener("click", () => {
+                    const user = JSON.parse(localStorage.getItem("user"));
+                    if (!user) {
+                        window.location.href = "login.html";
+                    } else {
+                        window.location.href = "index.html";
+                    }
+                });
+    }
+
+            // ✅ BOOK APPOINTMENT BUTTON
+            const bookBtn = document.getElementById("book-btn");
+            if (bookBtn) {
+                bookBtn.addEventListener("click", () => {
+                    const user = JSON.parse(localStorage.getItem("user"));
+                    if (!user) {
+                        alert("Please login first to book an appointment.");
+                        window.location.href = "login.html";
+                    } else {
+                        window.location.href = "booking.html";
+                    }
+                });
+    }
+  });
     </script>
+    <script>
+            function goToBooking() {
+    const user = JSON.parse(localStorage.getItem("user"));
+            if (!user) {
+                alert("Please login first to book your appointment.");
+            window.location.href = "login.html";
+    } else {
+                window.location.href = "booking.html"; // or whatever your booking page is
+    }
+  }
+
+            function goToLogin() {
+                window.location.href = "login.html";
+  }
+    </script>
+    <script>
+            // 🔐 Redirect to login if not logged in
+            const user = JSON.parse(localStorage.getItem("user"));
+            if (!user) {
+                window.location.href = "login.html";
+  } else {
+    // ✅ Show profile photo or initials
+    const photo = document.getElementById("user-photo");
+            const email = document.getElementById("user-email");
+            const dropdown = document.getElementById("user-menu");
+            const logoutBtn = document.getElementById("logout-btn");
+
+            if (user.photo && photo) {
+                photo.src = user.photo;
+            photo.style.display = "block";
+    }
+
+            if (email) {
+                email.innerText = user.email;
+    }
+
+            // ⬇️ Toggle dropdown on click
+            if (photo && dropdown) {
+                photo.onclick = () => {
+                    dropdown.classList.toggle("show");
+                };
+    }
+
+            // 🚪 Logout
+            if (logoutBtn) {
+                logoutBtn.onclick = () => {
+                    localStorage.removeItem("user");
+                    window.location.href = "login.html";
+                };
+    }
+  }
+    </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+            if (!user) {
+                window.location.href = "login.html";
+            return;
+    }
+
+            const profile = document.getElementById("user-profile");
+            const photo = document.getElementById("user-photo");
+            const email = document.getElementById("user-email");
+            const dropdown = document.getElementById("user-menu");
+            const logoutBtn = document.getElementById("logout-btn");
+
+            if (user.photo && photo) {
+                photo.src = user.photo;
+            photo.style.display = "block";
+    }
+
+            if (profile) profile.style.display = "inline-block";
+            if (email) email.textContent = user.email;
+
+            // Show/hide dropdown
+            if (photo && dropdown) {
+                photo.onclick = () => dropdown.classList.toggle("hidden");
+    }
+
+            // Logout
+            if (logoutBtn) {
+                logoutBtn.onclick = () => {
+                    localStorage.removeItem("user");
+                    window.location.href = "login.html";
+                };
+    }
+  });
+    </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const bookBtn = document.getElementById("book-btn");
+            if (bookBtn) {
+                bookBtn.addEventListener("click", () => {
+                    const user = JSON.parse(localStorage.getItem("user"));
+                    if (!user) {
+                        alert("Please login first to book an appointment.");
+                        window.location.href = "login.html";
+                    } else {
+                        // ✅ Redirect to WhatsApp with message
+                        const phoneNumber = "919032103077";
+                        const message = `Hi, I'm ${user.name}. I would like to book a makeup appointment at Pearl Beauty Parlour.`;
+                        const encodedMessage = encodeURIComponent(message);
+                        const waURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+                        window.location.href = waURL;
+                    }
+                });
+    }
+  });
+    </script>
+
+
+
+
+
+
 </body>
 
 </html>

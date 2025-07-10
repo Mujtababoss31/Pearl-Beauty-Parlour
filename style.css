@@ -758,3 +758,379 @@ body.light-mode {
     height: 280px;
   }
 }
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  object-fit: cover;
+}
+
+/* Dropdown Box */
+.dropdown {
+  position: absolute;
+  top: 70px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 100, 180, 0.2);
+  min-width: 220px;
+  z-index: 999;
+}
+.dropdown p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+.dropdown button {
+  margin-top: 10px;
+  background: #ff4f9a;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.15);
+}
+
+/* Primary Button (Pink Gradient) */
+.hero-btn.primary {
+  background: linear-gradient(135deg, #ff4f9a, #ff94c7);
+  color: white;
+  border: none;
+}
+.hero-btn.primary:hover {
+  background: linear-gradient(135deg, #ff69b4, #ffc3dd);
+  box-shadow: 0 0 16px rgba(255, 105, 180, 0.4);
+}
+
+/* Secondary Button (Outlined + Glow) */
+.hero-btn.secondary {
+  background: transparent;
+  border: 2px solid #ff7cbf;
+  color: #ff7cbf;
+}
+.hero-btn.secondary:hover {
+  background: #ffebf5;
+  color: #c6005a;
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.3);
+}
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 15px 30px;
+  color: white;
+  position: relative;
+  z-index: 999;
+}
+
+/* Profile Section */
+.user-profile {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #1976d2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  border-radius: 50%;
+}
+
+.initials-circle {
+  display: flex;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  background: #222;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 200px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+}
+
+.dropdown p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.dropdown button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #e91e63;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+.user-profile {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #1976d2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: none;
+}
+
+.initials-circle {
+  display: flex;
+}
+
+/* Dropdown */
+.profile-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #1e1e1e;
+  color: white;
+  padding: 15px;
+  width: 240px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.profile-dropdown.hidden {
+  display: none;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.dropdown-header i {
+  font-size: 18px;
+}
+
+.dropdown-divider {
+  border-top: 1px solid #444;
+  margin: 10px 0;
+}
+
+.dropdown-item {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #eee;
+  transition: 0.3s ease;
+}
+
+.dropdown-item:hover {
+  color: #ff69b4;
+}
+
+.dropdown-item.logout {
+  color: #ff4f9a;
+}
+#user-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #222;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 999;
+}
+#user-menu.show {
+  display: block;
+  opacity: 1;
+}
+#user-menu {
+  display: none;
+  transition: all 0.3s ease;
+}
+#user-menu.show {
+  display: block;
+}
+
+  .user-dropdown.show {
+    display: block !important;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    background: #e91e63;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .btn:hover {
+    background: #c2185b;
+  }
+
+
+  .btn {
+    background: #e91e63;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background: #c2185b;
+  }
+
+  .btn {
+    background-color: #e91e63;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #c2185b;
+  }
+  .hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+.sexy-book-btn {
+  background: linear-gradient(135deg, #ff5f8d, #ffc3a0);
+  color: white;
+  font-size: 18px;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 24px rgba(255, 105, 135, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.sexy-book-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-30deg);
+  transition: all 0.6s ease-in-out;
+  z-index: 0;
+}
+
+.sexy-book-btn:hover::before {
+  left: 100%;
+}
+
+.sexy-book-btn:hover {
+  box-shadow: 0 10px 28px rgba(255, 105, 135, 0.6);
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
